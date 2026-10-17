@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+}
+
+.app-container {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.counter-card {
+width: 100%;
+max-width: 430px;
+padding: 40px 30px 25px;
+text-align: center;
+background: #ffffff;
+border-radius: 25px;
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+animation: appear 0.6s ease;
+}
+
+.icon {
+width: 70px;
+height: 70px;
+margin: 0 auto 18px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 35px;
+background: #f0edff;
+border-radius: 20px;
+}
+
+h1 {
+color: #25213b;
+font-size: 30px;
+}
+
+.subtitle {
+margin-top: 8px;
+color: #858198;
+font-size: 13px;
+}
+
+.count-display {
+margin: 30px 0 25px;
+padding: 28px 15px;
+background: #f3f0ff;
+border-radius: 20px;
+}
+
+.count-label {
+color: #8274b5;
+font-size: 11px;
+font-weight: bold;
+letter-spacing: 2px;
+}
+
+.count-number {
+margin: 12px 0;
+color: #6c4ad4;
+font-size: 76px;
+animation: pop 0.25s ease;
+}
+
+.count-message {
+color: #827b9b;
+font-size: 13px;
+}
+
+.button-group {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+}
+
+.counter-btn {
+min-height: 52px;
+border: none;
+border-radius: 12px;
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.2s;
+}
+
+.counter-btn:hover {
+transform: translateY(-3px);
+}
+
+.counter-btn:active {
+transform: scale(0.95);
+}
+
+.decrement-btn,
+.increment-btn {
+width: 62px;
+color: white;
+font-size: 30px;
+background: linear-gradient(135deg, #8b5cf6, #6d45d8);
+}
+
+.reset-btn {
+flex: 1;
+max-width: 140px;
+color: #6d45d8;
+background: #f0edff;
+}
+
+.reset-btn:hover {
+background: #e5ddff;
+}
+
+.footer-text {
+margin-top: 30px;
+padding-top: 20px;
+color: #a09bb3;
+font-size: 11px;
+border-top: 1px solid #eeeaf7;
+}
+
+@keyframes appear {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes pop {
+from {
+transform: scale(0.9);
+}
+
+to {
+transform: scale(1);
+}
+}
+
+@media (max-width: 480px) {
+.counter-card {
+padding: 30px 20px 22px;
+}
+
+h1 {
+font-size: 26px;
+}
+
+.count-number {
+font-size: 64px;
+}
+
+.button-group {
+gap: 8px;
+}
+
+.decrement-btn,
+.increment-btn {
+width: 55px;
+}
+}
